@@ -171,4 +171,3 @@ if (len(words) == 0):
     print("\nAnswer not found")
 else:
     print("\nThe answer is: "+words[0])
-    
