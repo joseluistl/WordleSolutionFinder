@@ -21,7 +21,7 @@ def insertWord(text):
             print("Error, word must contain 5 words")
 
         else:
-            print ("Error, word does not exist")
+            print("Error. Word not found")
 
         word = input ("Insert a word: ")
 
@@ -36,13 +36,13 @@ def evaluateWord(word, conditions, posLetters, posCorrect, boolValues):
     for i in range(len(word)):
 
         if (not boolValues[i]):
-            result = input ("\nIndicate the result of "+word[i]+": ").lower()
+            result = input ("\nIndicate the result of "+word[i]+" (position"+str(i+1)+"): ").lower()
         else:
             result = "yes"
 
         while (result not in ("no", "is", "yes")):
             print("Not an option. Choose between 'no', 'is', or 'yes'.")
-            result = input ("\nIndicate the result of "+word[i]+": ").lower()
+            result = input ("\nIndicate the result of "+word[i]+" (position "+str(i+1)+"): ").lower()
 
         if (result == "no"):
             for j in range(5):
